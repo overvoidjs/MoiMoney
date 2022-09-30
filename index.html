@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>MoiMoney</title>
+    <link rel="stylesheet" href="res/css/main.css">
+    <link rel="stylesheet" href="res/css/buttons.css">
+    <link rel="stylesheet" href="res/css/table.css">
+  </head>
+  <body>
+
+      <div class="grid_container">
+          <div class="sidebar">
+              <div class="accounts">
+                  <span class="total">На всех счетах: <span id="total">0</span> ₽</span>
+                  <hr>
+                  <ul id="my_accounts">
+                      <li>Основной счет: <span id="acc_1">0</span> ₽</li>
+                  </ul>
+                  <button id="new_account" class="button-85">Новый счёт</button>
+              </div>
+          </div>
+
+          <div class="main">
+
+              <section>
+                  <!--for demo wrap-->
+                  <div class="page_name">
+                      <h1>Движение средств</h1>
+                      <button id="new_transaction" class="button-85">Новая транзакция</button>
+                  </div>
+
+                  <div class="tbl-header">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <thead>
+                        <tr>
+                          <th>Дата</th>
+                          <th>Движение</th>
+                          <th>Сумма</th>
+                          <th>Причина</th>
+                          <th>Аккаунт</th>
+                          <th>Управление</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                  <div class="tbl-content">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tbody id="transactions_data">
+
+                        <tr>
+                          <td><b>20.02.2022</b></td>
+                          <td><b>РАСХОД</b></td>
+                          <td>$1.38</td>
+                          <td>Покупка сока</td>
+                          <td>Мой первый аккаунт</td>
+                          <td class="transaction_controll">
+                              <input type="hidden" class="transaction_id" value="">
+                              <span class="transaction_update">✎</span>
+                              <span class="transaction_delete">✖</span>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+          </div>
+      </div>
+
+      <script src="res/js/jquery.min.js" charset="utf-8"></script>
+      <script src="res/js/table.js" charset="utf-8"></script>
+      <script src="res/js/server.js" charset="utf-8"></script>
+  </body>
+</html>

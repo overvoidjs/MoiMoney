@@ -1,0 +1,53 @@
+body {
+    margin: 0 auto;
+    font-family: Arial;
+}
+
+.grid_container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 20% 1fr;
+}
+
+.sidebar {
+    border-right: 1px solid black;
+}
+
+.accounts {
+    position: relative;
+    height: 100%;
+}
+
+.accounts ul li {
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.accounts .total {
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.transaction_update {
+    font-size: 22px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.transaction_delete {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.transaction_update:hover,
+.transaction_delete:hover {
+    color:red;
+}
+
+.transaction_controll {
+    padding: 0px 15px 0px 15px;
+}

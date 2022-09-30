@@ -1,0 +1,14 @@
+{
+  "name": "moimoney",
+  "version": "1.0.0",
+  "description": "Приложение для учета личных финансов",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Overvoid",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.0.1"
+  }
+}
