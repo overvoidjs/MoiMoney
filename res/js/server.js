@@ -1,20 +1,13 @@
 $(document).ready(function() {
     getAccounts();
     getTransactions();
+
+    $("#update").on("click", function(){
+        location.reload();
+    });
 });
 
-var accounts = [
-    {
-        id:1,
-        name:"Мой первый аккаунт",
-        total:1200.00
-    },
-    {
-        id:2,
-        name:"Мой второй аккаунт",
-        total:567.00
-    }
-];
+var accounts = [];
 
 function getAccounts() {
     $.post("http://localhost:40805/api/accounts/get", {

@@ -10,7 +10,7 @@ const createWindow = () => {
         }
     });
 
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
     win.maximize();
     win.loadFile('index.html');
 }

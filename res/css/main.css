@@ -3,6 +3,14 @@ body {
     font-family: Arial;
 }
 
+#update {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
 .inputplace {
     width: 105px;
     display: inline-block;
