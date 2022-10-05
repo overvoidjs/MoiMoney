@@ -3,6 +3,11 @@ body {
     font-family: Arial;
 }
 
+.inputplace {
+    width: 105px;
+    display: inline-block;
+}
+
 .grid_container {
     display: grid;
     height: 100vh;

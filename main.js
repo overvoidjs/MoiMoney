@@ -5,12 +5,17 @@ const createWindow = () => {
         width: 800,
         height: 600,
         autoHideMenuBar: true,
+        webPreferences: {
+            webSecurity: false
+        }
     });
 
+    win.webContents.openDevTools();
     win.maximize();
     win.loadFile('index.html');
 }
 
+app.commandLine.appendSwitch("disable-features", "OutOfBlinkCors");
 
 app.whenReady().then(() => {
     createWindow();

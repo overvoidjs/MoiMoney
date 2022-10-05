@@ -1,4 +1,9 @@
-var demoAccounts = [
+$(document).ready(function() {
+    getAccounts();
+    getTransactions();
+});
+
+var accounts = [
     {
         id:1,
         name:"Мой первый аккаунт",
@@ -11,37 +16,13 @@ var demoAccounts = [
     }
 ];
 
-var demoTransactions = [
-    {
-        id:1,
-        date:"20.02.2022",
-        move:"Доход",
-        sum:1200.00,
-        comment:"Покупка сока",
-        account_id:1
-    },
-    {
-        id:2,
-        date:"22.02.2022",
-        move:"Доход",
-        sum:567.00,
-        comment:"Покупка сока",
-        account_id:2
-    },
-];
-
-
-$(document).ready(function() {
-    getAccounts();
-    getTransactions();
-});
-
 function getAccounts() {
     $.post("http://localhost:40805/api/accounts/get", {
     }).done(function(response){
+        accounts = response;
         renderAccounts(response);
     }).fail(function(){
-        renderAccounts(demoAccounts);
+        alert("Не удалось соединиться с сервером");
     });
 }
 
@@ -63,7 +44,7 @@ function getTransactions() {
     }).done(function(response){
         renderTransactions(response);
     }).fail(function(){
-        renderTransactions(demoTransactions);
+        alert("Не удалось соединиться с сервером");
     });
 }
 
@@ -85,5 +66,4 @@ function renderTransactions(transactionsObj) {
           </td></tr>`;
           transactionsData.append(transactionHTML);
     });
-
 }
